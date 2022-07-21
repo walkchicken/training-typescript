@@ -13,7 +13,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "heroku-postbuild": "yarn start",
-    "start": "concurrently --kill-others \"npx parcel src/ts/main/*.ts src/assets/** src/pages/*.html\" \"node server.js\" \"parcel src/pages/dashboard.html\"",
+    "start": "concurrently --kill-others \"node server.js\" \"parcel src/pages/dashboard.html\"",
     "api": "json-server db.json",
     "dev": "concurrently --kill-others \"npx run build\" \"npx run start\" \"npx run api\"",
     "lint": "eslint",
