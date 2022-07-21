@@ -12,11 +12,11 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "heroku-postbuild": "npm install --only=dev && npm install && npm run build && npm run start",
+    "heroku-postbuild": "npx install --only=dev && npx install && npx run build && npx run start",
     "start": "concurrently --kill-others \"node server.js\" \"parcel src/pages/dashboard.html\"",
     "build": "npx parcel src/ts/main/*.ts src/assets/** src/pages/*.html",
     "api": "json-server db.json",
-    "dev": "concurrently --kill-others \"npm run build\" \"npm run start\" \"npm run api\"",
+    "dev": "concurrently --kill-others \"npx run build\" \"npx run start\" \"npx run api\"",
     "lint": "eslint",
     "check": "tsc --noEmit",
     "ci": "yarn build && yarn test && yarn lint && yarn check"
