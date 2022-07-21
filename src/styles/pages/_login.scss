@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--primary-color-dark-filter);
+  height: 3.125rem;
+
+  @include responsive(large, up) {
+    height: 9.375rem;
+    padding: 5rem;
+  }
+
+  &__brand {
+    max-width: 3rem;
+
+    @include responsive(large, up) {
+      max-width: 8rem;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    opacity: none;
+  }
+}

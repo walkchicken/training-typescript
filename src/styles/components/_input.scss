@@ -1,0 +1,57 @@
+.input {
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 5.625rem;
+  padding: .5rem 3rem;
+  font-size: var(--font-size-small);
+  font-weight: 400;
+  margin-bottom: .5rem;
+  color: var(--primary-color-100);
+
+  &::placeholder {
+    color: var(--primary-color-100);
+    opacity: 0.7;
+  }
+
+  &-transparent {
+    background-color: var(--primary-color-light-filter);
+    background-size: 0.875rem;
+    background-position-x: 1.2rem;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+
+    @include responsive(large, up) {
+      background-size: 2rem;
+      background-position-x: 2rem;
+    }
+  }
+
+  &-edit {
+    padding: .5rem 1.5rem;
+    background-color: var(--primary-color-700);
+    background-size: 0.875rem;
+    background-position-x: 1.2rem;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+
+    @include responsive(large, up) {
+      background-size: 2rem;
+      background-position-x: 2rem;
+    }
+  }
+
+  @include responsive(large, up) {
+    padding: 1rem 6rem;
+    font-size: var(--font-size-most-small);
+    margin-bottom: 1rem;
+  }
+}
+
+.icon-user {
+  background-image: url("../assets/icons/user.png");
+}
+
+.icon-lock {
+  background-image: url("../assets/icons/lock.png");
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;300;600;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.scss">
+  </head>
+
+  <body class="bg bg-register">
+    <nav class="nav">
+      <img class="nav__brand" src="../assets/icons/brand.png" alt="logo">
+      <div class="nav__btn">
+        <button class="btn btn-transparent" id="login" type="button">Login</button>
+        <button class="btn btn-transparent" id="register" type="button">Register</button>
+      </div>
+    </nav>
+    <form action="" class="form form-register">
+      <span class="validate" id="validateUser"></span>
+      <input class="input input-transparent icon-user" id="username" type="text" placeholder="Username" required>
+      <span class="validate" id="validatePass"></span>
+      <input class="input input-transparent icon-lock" id="password" type="password" placeholder="Password" required>
+      <span class="validate" id="validateConfirm"></span>
+      <input class="input input-transparent icon-lock" id="confirmPassword" type="password"
+        placeholder="Confirm Password" required>
+      <button class="btn btn-black" id="registerBtn" type="button">Register</button>
+    </form>
+    <script src="../ts/main/main-register.ts" type="module"></script>
+  </body>
+
+</html>

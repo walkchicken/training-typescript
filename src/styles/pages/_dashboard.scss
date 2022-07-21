@@ -1,0 +1,8 @@
+.container {
+  background-color: var(--primary-color-800);
+  height: 100vh;
+
+  @include responsive(large, up) {
+    display: flex;
+  }
+}

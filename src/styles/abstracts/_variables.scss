@@ -1,0 +1,32 @@
+:root {
+  // Primary Color
+  --primary-color-100: #ffffff; //
+  --primary-color-200: #eeeeee; //
+  --primary-color-300: #d6d4d4;
+  --primary-color-400: #CDCDCD; //
+  --primary-color-500: #8a8787;
+  --primary-color-600: #7B7878; //
+  --primary-color-700: #3E3E3E; //
+  --primary-color-800: #171717; //
+  --primary-color-900: #000000;
+  --primary-color-dark-filter: rgba(0, 0, 0, 0.7);
+  --primary-color-light-filter: rgba(255, 255, 255, 0.1);
+
+  // other color
+  --color-danger: #ff0000;
+  --color-success: #258F1C;
+  --color-warning: #D8A800;
+  --color-info: #28BDDE;
+  --color-dark-info: #0032B2;
+  --color-secondary: #818181;
+  --color-dark: #000000;
+
+  //font size
+  --font-size-smaller: 8px;
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-more-medium: 20px;
+  --font-size-most-medium: 24px;
+}
+
+$screens: (small:600px, large:1025px);

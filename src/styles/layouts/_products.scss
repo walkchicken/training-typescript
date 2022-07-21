@@ -1,0 +1,397 @@
+.products {
+  padding: 0 1rem;
+
+  @include responsive(large, up) {
+    width: 85%;
+    padding-right: 0;
+  }
+
+  &__form {
+    background-color: var(--primary-color-100);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    border-radius: 25px;
+
+    @include responsive(large, up) {
+      width: 40%;
+      left: 30%;
+    }
+
+    .product__form {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-content: stretch;
+      align-items: flex-end;
+
+      .btn-black {
+        padding: 1rem;
+      }
+
+      &-contents {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .input {
+          padding: .5rem 3rem;
+          font-size: var(--font-size-small);
+
+          @include responsive(large, up) {
+            padding: 1rem 3rem;
+          }
+        }
+
+        .content__title {
+          font-size: var(--font-size-small);
+        }
+
+        .content__title,
+        .validate {
+          padding-left: 1rem;
+        }
+
+        .validate {
+          padding-bottom: .5rem;
+        }
+
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    @include responsive(large, up) {
+      width: 80%;
+      align-items: flex-start;
+    }
+
+    &-intro {
+      width: 40%;
+      color: var(--primary-color-200);
+      text-transform: uppercase;
+      @include overFlow();
+
+      @include responsive(large, up) {
+        width: 18%;
+        font-size: var(--font-size-most-medium);
+      }
+    }
+
+    &-create {
+      width: 50%;
+
+      @include responsive(large, up) {
+        width: 20%;
+        height: 4rem;
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(large, up) {
+      width: 100%;
+    }
+
+    .card {
+      display: flex;
+      justify-content: space-between;
+      margin-top: .5rem;
+      height: 7.5rem;
+
+      @include responsive(large, up) {
+        height: 7.5rem;
+        margin-top: 1rem;
+        padding-right: 1rem;
+      }
+
+      &__product {
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-color-200);
+        padding: .8rem;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        @include responsive(large, up) {
+          width: 100%;
+        }
+
+        .product {
+          &__intros {
+            display: flex;
+            justify-content: space-between;
+            width: 55%;
+
+            @include responsive(large, up) {
+              width: 30%;
+            }
+
+            .image {
+              width: 35%;
+              height: 100%;
+
+              @include responsive(large, up) {
+                width: 30%;
+              }
+            }
+
+            .intro {
+              padding-left: .5rem;
+              width: 65%;
+              font-weight: 500;
+              color: var(--primary-color-600);
+
+              @include responsive(large, up) {
+                width: 70%;
+              }
+
+              .intro__title {
+                font-size: var(--font-size-medium);
+                text-transform: uppercase;
+                @include overFlow();
+                padding: .1rem;
+
+                @include responsive(large, up) {
+                  font-size: var(--font-size-most-medium);
+                }
+              }
+
+              .value {
+                font-size: var(--font-size-small);
+                text-transform: uppercase;
+                @include overFlow();
+                padding: .1rem;
+
+                @include responsive(large, up) {
+                  font-size: var(--font-size-most-medium);
+                }
+              }
+            }
+          }
+
+          &__contents {
+            width: 45%;
+            height: 100%;
+            padding-left: .5rem;
+
+            @include responsive(large, up) {
+              display: flex;
+              justify-content: space-between;
+              width: 70%;
+            }
+
+            .content {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+
+              @include responsive(large, up) {
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-around;
+                width: 20%;
+                height: 100%;
+              }
+
+              .content__title {
+                font-size: var(--font-size-medium);
+                font-weight: 500;
+                color: var(--primary-color-600);
+                text-transform: capitalize;
+                width: 50%;
+                padding: .1rem;
+
+                @include responsive(large, up) {
+                  font-size: var(--font-size-most-medium);
+                  padding: .3rem;
+                  height: 50%;
+                  width: 100%;
+                }
+              }
+
+              .value {
+                font-size: var(--font-size-medium);
+                font-weight: 500;
+                color: var(--primary-color-900);
+                @include overFlow();
+                text-transform: uppercase;
+                width: 50%;
+                padding: .1rem;
+
+                @include responsive(large, up) {
+                  font-size: var(--font-size-most-medium);
+                  padding: .3rem;
+                  height: 50%;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__product-manager {
+        width: 80%;
+        background-color: var(--primary-color-200);
+        padding: .8rem;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        @include responsive(large, up) {
+          width: 100%;
+        }
+
+        .product {
+          &__intros {
+            display: flex;
+            justify-content: space-between;
+            width: 55%;
+
+            @include responsive(large, up) {
+              width: 30%;
+            }
+
+            .image {
+              width: 35%;
+              height: 100%;
+
+              @include responsive(large, up) {
+                width: 30%;
+              }
+            }
+
+            .intro {
+              padding-left: .5rem;
+              width: 65%;
+              font-weight: 500;
+              color: var(--primary-color-600);
+
+              @include responsive(large, up) {
+                width: 70%;
+              }
+
+              .intro__title {
+                font-size: var(--font-size-medium);
+                text-transform: uppercase;
+                @include overFlow();
+                padding: .1rem;
+
+                @include responsive(large, up) {
+                  font-size: var(--font-size-most-medium);
+                }
+              }
+
+              .value {
+                font-size: var(--font-size-small);
+                text-transform: uppercase;
+                @include overFlow();
+                padding: .1rem;
+
+                @include responsive(large, up) {
+                  font-size: var(--font-size-most-medium);
+                }
+              }
+            }
+          }
+
+          &__contents {
+            width: 45%;
+            padding-left: .5rem;
+            line-height: 1rem;
+
+            @include responsive(large, up) {
+              display: flex;
+              justify-content: space-between;
+              width: 70%;
+            }
+
+            .content {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+
+              @include responsive(large, up) {
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-around;
+                width: 20%;
+                height: 100%;
+              }
+
+              .content__title {
+                font-size: var(--font-size-medium);
+                font-weight: 500;
+                color: var(--primary-color-600);
+                text-transform: capitalize;
+                width: 50%;
+                padding: .1rem;
+
+                @include responsive(large, up) {
+                  font-size: var(--font-size-most-medium);
+                  padding: .3rem;
+                  height: 50%;
+                  width: 100%;
+                }
+              }
+
+              .value {
+                font-size: var(--font-size-medium);
+                font-weight: 500;
+                color: var(--primary-color-900);
+                @include overFlow();
+                text-transform: uppercase;
+                width: 50%;
+                padding: .1rem;
+
+                @include responsive(large, up) {
+                  font-size: var(--font-size-most-medium);
+                  padding: .3rem;
+                  height: 50%;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__controls {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: .5rem;
+        width: 20%;
+
+        @include responsive(large, up) {
+          flex-direction: row;
+          width: 20%;
+          padding-left: 1rem;
+        }
+
+        .control {
+          height: 47%;
+
+          @include responsive(large, up) {
+            height: 100%;
+            width: 47%;
+          }
+        }
+      }
+    }
+  }
+}

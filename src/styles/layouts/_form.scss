@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+
+  @include responsive(large, up) {
+    padding: 10rem calc((100% - 37.5rem)/2);
+  }
+}

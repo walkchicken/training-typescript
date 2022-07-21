@@ -1,0 +1,104 @@
+.sidebar {
+  @include responsive(large, up) {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    padding: 2rem;
+    background-color: var(--primary-color-700);
+    height: 100vh;
+  }
+
+  .navigation {
+    min-height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-color: var(--primary-color-700);
+    padding: .5rem 1rem;
+
+    &__profile {
+      display: flex;
+      align-items: center;
+      color: var(--primary-color-100);
+
+      .name {
+        padding: 0 1rem;
+
+        @include responsive(large, up) {
+          font-size: var(--font-size-medium);
+          padding-right: 0;
+        }
+      }
+    }
+
+    &__menu {
+      width: 3rem;
+      margin: 0;
+      right: 0;
+
+      @include responsive(large, up) {
+        display: none;
+      }
+
+      &:hover {
+        background-color: var(--primary-color-900);
+      }
+    }
+  }
+
+  .categories {
+    display: none;
+    text-align: start;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+
+    &.show {
+      display: flex;
+    }
+
+    @include responsive(large, up) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: inherit;
+
+      .categories__logout {
+        position: relative;
+        top: 250%;
+        width: 100%;
+      }
+    }
+
+    li {
+      color: var(--primary-color-400);
+      background-color: var(--primary-color-700);
+      padding: 1rem;
+      text-decoration: none;
+      font-size: var(--font-size-medium);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      cursor: pointer;
+
+      @include responsive(large, up) {
+        border-radius: 5px;
+        margin-top: 1.25rem;
+      }
+
+      .categories__name {
+        color: var(--primary-color-400);
+        padding: 0 1rem;
+      }
+
+      &:hover,
+      &:active,
+      &:visited {
+        background-color: var(--primary-color-800);
+      }
+    }
+  }
+}

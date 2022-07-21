@@ -1,0 +1,50 @@
+//Mixin
+@mixin responsive($screen, $direction:up) {
+
+  @if map-has-key($screens, $screen) {
+    $screen-value: map-get($screens, $screen);
+
+    @if $direction==up {
+
+      //Build media query
+      @media (min-width: $screen-value) {
+        @content;
+      }
+    }
+
+    @else if $direction==down {
+
+      //Build media query
+      @media (max-width: $screen-value) {
+        @content;
+      }
+    }
+  }
+
+  @else {
+
+    @if $direction==up {
+
+      //Build media query
+      @media (min-width: $screen) {
+        @content;
+      }
+    }
+
+    @else if $direction==down {
+
+      //Build media query
+      @media (max-width: $screen) {
+        @content;
+      }
+    }
+
+  }
+}
+
+@mixin overFlow() {
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,13 @@
+.bg {
+  background-repeat: repeat-y;
+  background-size: cover;
+
+  &-login {
+    background-image: url("../assets/images/bg-login.jpg");
+  }
+
+  &-register {
+    background-image: url("../assets/images/bg-register.jpg");
+    background-position-x: center;
+  }
+}

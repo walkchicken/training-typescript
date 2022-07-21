@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;300;600;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.scss">
+  </head>
+
+  <body class="container" id="home">
+    <aside class="sidebar" id="sidebar">
+      <div class="navigation">
+
+        <div class="navigation__profile">
+          <img class="avatar" width="25" src="../assets/icons/avatar.png" alt="avatar">
+          <h3 class="name">Dark Shop</h3>
+        </div>
+
+        <button class="btn btn-transparent navigation__menu" type="button" id="menuBtn">
+          <img class="icons icon__menu" width="25" src="../assets/icons/menu.png" alt="menu">
+        </button>
+      </div>
+
+      <ul class="categories" id="categoriesList">
+        <li class="categories__product change-content" id="productBtn">
+          <img class="icons icon__products" width="25" src="../assets/icons/wallet.png" alt="wallet">
+          <a class="categories__name"> Products</a>
+        </li>
+        <li class="categories__order" id="orderBtn">
+          <img class="icons icon__order change-content" width="25" src="../assets/icons/cart.png" alt="cart">
+          <a class="categories__name"> Orders</a>
+        </li>
+        <li class="categories__logout" id="logoutBtn">
+          <img class="icons icon__logout" width="25" src="../assets/icons/logout.png" alt="logout">
+          <a class="categories__name">Logout</a>
+        </li>
+      </ul>
+
+    </aside>
+
+    <section class="content content-active products" id="products">
+      <div class="header">
+        <h4 class="header-intro">
+          Welcome back!
+        </h4>
+
+        <button class="btn btn-info btn-create header-create" type="button" id="createBtn">
+          <img class="icons icon__create" src="../assets/icons/plus.png" alt="plus">
+        </button>
+      </div>
+      <div class="products__cards" id="productsCards"></div>
+      <div class="products__form" id="productsForm"></div>
+    </section>
+
+    <section class="content orders" id="orders">
+      <div class="header">
+        <h4 class="header-intro">
+          New Order!
+        </h4>
+
+        <button class="btn btn-info btn-order header-order" type="button" id="newOrderBtn">
+          <img class="icons icon__order" src="../assets/icons/cart-plus.png" alt="plus">
+          new order
+        </button>
+      </div>
+      <div class="orders__cards" id="orderCards"></div>
+      <div class="orders__form" id="orderForm">
+        <button class="btn btn-transparent btn-close" type="button" id="closeBtn">
+          <img class="icons icon__close" src="../assets/icons/close.png" alt="close">
+        </button>
+        <div class="order__content-form overflow-y list-product" id="contentOrder"></div>
+        <div class="order__content-form order-product" id="formOrder"></div>
+      </div>
+    </section>
+    <script src="../ts/main/main-management.ts" type="module"></script>
+    <script src="../ts/main/main-order.ts" type="module"></script>
+    <script src="../ts/main/main-sidebar.ts" type="module"></script>
+  </body>
+
+</html>

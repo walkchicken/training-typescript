@@ -1,0 +1,35 @@
+.toast {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  background-color: var(--color-danger);
+  border-radius: .75rem;
+  padding: 0.5rem 1rem;
+  border: 5px solid var(--color-danger);
+  color: var(--primary-color-100);
+  opacity: 0%;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &-active {
+    opacity: 100%;
+    width: 20rem;
+    height: 5rem;
+    font-size: var(--font-size-most-medium);
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+.validate {
+  font-size: var(--font-size-smaller);
+  font-weight: 700;
+  color: var(--color-danger);
+  opacity: 0%;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &-active {
+    opacity: 100% !important;
+  }
+}
