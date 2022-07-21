@@ -12,13 +12,13 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "heroku-postbuild": "yarn build && yarn start",
+    "heroku-postbuild": "yarn start",
     "start": "concurrently --kill-others \"npx parcel src/ts/main/*.ts src/assets/** src/pages/*.html\" \"node server.js\" \"parcel src/pages/dashboard.html\"",
     "api": "json-server db.json",
     "dev": "concurrently --kill-others \"npx run build\" \"npx run start\" \"npx run api\"",
     "lint": "eslint",
     "check": "tsc --noEmit",
-    "ci": "yarn build && yarn test && yarn lint && yarn check"
+    "ci": "yarn test && yarn lint && yarn check"
   },
   "keywords": [
     "typescript"
