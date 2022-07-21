@@ -7,7 +7,7 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-	"heroku-postbuild": "npm run build && npm run start,
+	"heroku-postbuild": "npm install --only=dev && npm install && npm run build && npm run start",
     "start": "concurrently --kill-others \"node server.js\" \"parcel src/pages/dashboard.html\"",
     "build": "parcel src/ts/main/*.ts src/assets/** src/pages/*.html",
     "api": "json-server db.json",
