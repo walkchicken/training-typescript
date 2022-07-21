@@ -12,7 +12,7 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "heroku-postbuild": "yarn install && npx run build && npx run start",
+    "heroku-postbuild": "npx run build && npx run start",
     "start": "concurrently --kill-others \"node server.js\" \"parcel src/pages/dashboard.html\"",
     "build": "npx parcel src/ts/main/*.ts src/assets/** src/pages/*.html",
     "api": "json-server db.json",
